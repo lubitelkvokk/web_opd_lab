@@ -1,0 +1,44 @@
+
+.navbar {
+    background-color: rgb(0, 174, 239);
+    /* border: none; */
+    color:black;
+    font-weight: 400;
+    font-size: 0.9cm;
+    font: bold;
+    border-radius: 15px;
+    box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+    border: none;
+    cursor: pointer;
+}
+
+.navbar:hover {
+    background-color: rgb(90, 163, 202) ;
+}
+
+.navbar:focus:active {
+    background-color: rgb(90, 163, 202);
+}
+
+text{
+    color:rgb(90, 163, 202);
+    text-decoration-line: none;
+}
+
+.prof {
+    border: solid;
+    padding: 2px;
+    margin: 1px;
+    border-radius: 15px;
+    background-color: rgb(0, 174, 239);
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.prof:hover{
+    background-color: rgb(90, 163, 202) ;
+}
+.prof:active{
+    background-color: rgb(25, 103, 110) ;
+}
+
