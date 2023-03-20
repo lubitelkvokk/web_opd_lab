@@ -2,10 +2,10 @@ import React from 'react'
 import styles from "./Styles/Content.module.css"
 import Profession from './Profession'
 
-const Content = ({profHref}) => {
+const Content = ({ prof }) => {
   return (
     <div >
-      <Profession profHref={profHref}/>
+      <Profession prof={prof} />
     </div>
   )
 }

@@ -6,13 +6,13 @@ import React from "react"
 
 
 function App() {
-  const [profHref, changeProf] = React.useState("None")
+  const [prof, changeProf] = React.useState("None")
 
   return (
     <div className={styles.App}>
-      <Header changeProf={changeProf}/> 
-      <div style={{backgroundColor:"rgb(0, 174, 239)"}}></div>
-      <Content profHref={profHref}/>   
+      <Header changeProf={changeProf} />
+      <div style={{ backgroundColor: "rgb(0, 174, 239)" }}></div>
+      <Content prof={prof} />
     </div>
   );
 }

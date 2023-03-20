@@ -1,9 +1,95 @@
 .block {
     width: 100%;
-    height: 200px;
-    background-color: rgb(21, 158, 174);
+    height: 70px;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, rgb(21, 158, 174), rgb(169, 212, 217));
 }
 
-.div{
-    justify-content: space-between;
+.overview {
+    width: 50%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: linear-gradient(45deg, rgb(169, 212, 217), rgb(255, 255, 255));
+}
+
+.overview:hover {
+
+    background: linear-gradient(45deg, rgb(21, 158, 174), rgb(169, 212, 217));
+}
+
+.overview:focus {
+
+    background: linear-gradient(45deg, rgb(21, 158, 174), rgb(169, 212, 217));
+}
+
+.evaluation {
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(45deg, rgb(169, 212, 217), rgb(255, 255, 255));
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.evaluation:hover {
+    background: linear-gradient(45deg, rgb(169, 212, 217), rgb(255, 255, 255));
+}
+
+.evaluation:focus {
+    background: linear-gradient(45deg, rgb(25, 127, 138), rgb(255, 255, 255));
+}
+
+.switcher {
+    width: 100%;
+    height: 50px;
+}
+
+.selected {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, rgb(25, 127, 138), rgb(21, 158, 174));
+}
+
+
+.overviewContent {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(45deg, rgb(21, 158, 174), rgb(169, 212, 217));
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.evaluationContent {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(45deg, rgb(21, 158, 174), rgb(169, 212, 217));
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.expert {
+    background-color: brown;
+}
+
+.competency {
+    float: left;
+    background-color: green;
 }

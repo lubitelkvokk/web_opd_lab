@@ -1,26 +1,26 @@
 .button {
     background-color: rgb(0, 174, 239);
     /* border: none; */
-    color:black;
+    color: black;
     font-weight: 400;
     font-size: 0.9cm;
     font: optional;
     border-radius: 15px;
-    box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+    box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
     border: none;
 
     cursor: pointer;
 }
 
 .button:hover {
-    background-color: rgb(90, 163, 202) ;
+    background-color: rgb(90, 163, 202);
 }
 
 .button:focus:active {
     background-color: rgb(90, 163, 202);
 }
 
-a{
-    color:black;
+a {
+    color: white;
     text-decoration-line: none;
 }
