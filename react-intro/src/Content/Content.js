@@ -4,10 +4,13 @@ import Profession from './Profession'
 
 const Content = ({ prof }) => {
   return (
-    <div >
+    <div className={styles.content}>
       <Profession prof={prof} />
     </div>
   )
 }
 
 export default Content
+
+
+raa

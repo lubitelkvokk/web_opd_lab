@@ -1,4 +1,4 @@
-.background {
-    height: 100%;
+.content {
+    display: flex;
     width: 100%;
 }

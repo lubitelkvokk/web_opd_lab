@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import styles from "./Styles/Button.module.css"
 import { Button } from '@mui/material'
-export default class Main extends Component {
 
 
-
-  render() {
+const Main = ({changePage}) => {
 
     return (
       <div style={{
@@ -15,8 +13,8 @@ export default class Main extends Component {
         // paddingLeft: "650px",
         paddingTop: "60px"
       }}>
-        <Button variant="contained" color="primary" ><a href="http://localhost:3000/">Главная</a></Button>
+        <Button variant="contained" color="primary" onClick={()=> (changePage("main"))}>Главная</Button>
       </div>
     )
-  }
 }
+export default Main

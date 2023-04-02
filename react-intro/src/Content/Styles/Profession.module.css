@@ -1,4 +1,15 @@
-.block {
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
+
+.content {
+    width: 100%;
+}
+
+.professionName {
+    border: "4px solid rgba(0, 0, 0, 0.05)";
     width: 100%;
     height: 70px;
     justify-content: center;
@@ -6,9 +17,17 @@
     justify-content: center;
     align-items: center;
     background: linear-gradient(45deg, rgb(21, 158, 174), rgb(169, 212, 217));
+    font-size: 30px;
+    color:#333;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
 }
 
 .overview {
+    font-size: 30px;
+    color:#333;
+    font-weight: 700;
+    font-family: 'Comfortaa', cursive;
     width: 50%;
     height: 100%;
     float: left;
@@ -38,6 +57,11 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    font-size: 30px;
+    color:#333;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+
 }
 
 .evaluation:hover {
@@ -49,8 +73,8 @@
 }
 
 .switcher {
-    width: 100%;
     height: 50px;
+
 }
 
 .selected {
@@ -61,35 +85,72 @@
     justify-content: center;
     align-items: center;
     background: linear-gradient(45deg, rgb(25, 127, 138), rgb(21, 158, 174));
-}
+    font-size: 30px;
+    color:#fff;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+} 
 
 
 .overviewContent {
     width: 100%;
     height: 300px;
     background: linear-gradient(45deg, rgb(21, 158, 174), rgb(169, 212, 217));
-    justify-content: center;
     display: flex;
     justify-content: center;
-    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+    color: #fff;
+    
 }
 
 .evaluationContent {
     width: 100%;
     height: 300px;
     background: linear-gradient(45deg, rgb(21, 158, 174), rgb(169, 212, 217));
+    
+    /* justify-content: center; */
+    /* display: flex;
     justify-content: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 
 .expert {
-    background-color: brown;
+    font-size: 20px;
+    width: 50%;
+    float:left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fugaz One', cursive;
+    color: #393939;
+}
+
+.competencies {
+    float: left;
+    width: 50%;
+    height: max-content;
+    display: flex;
+    justify-content: left;
+    
 }
 
 .competency {
-    float: left;
-    background-color: green;
+    font-family: 'Fugaz One', cursive;
+    color: #393939;
+    font-size: 20px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.evaluationBlock {
+    width: 100%;
+    display: flex;  
+
+    border-bottom: #333 solid;
+    overflow: hidden;
+    background: linear-gradient(to right bottom,rgba(14, 153, 169, 0.95) 0,rgba(73, 182, 190, 0.95) 50%,rgba(91, 188, 249, 0.95) 100%);
+   
+
 }

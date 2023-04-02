@@ -25,8 +25,8 @@ const Profession = ({ prof }) => {
   const [swch, setClick] = useState("left");
 
   return (
-    <div className={styles.container}>
-      <div className={styles.block}>{prof.name ? prof.name : "Loading..."}</div>
+    <div className={styles.content}>
+      <div className={styles.professionName}>{prof.name ? prof.name : "Выберите профессию"}</div>
 
       {swch == "left" ?
         <div>
@@ -34,34 +34,52 @@ const Profession = ({ prof }) => {
             <div className={styles.selected}>Описание</div>
             <div onClick={() => (setClick("right"))} className={styles.evaluation}>Оценка</div>
           </div>
-          <div className={styles.overviewContent}>{prof.description ? prof.description : "Loading..."}</div>
+          <div className={styles.overviewContent}>{prof.description ? prof.description : "つ ◕_◕ ༽つ"}</div>
         </div> :
         <div>
           <div className={styles.switcher}>
             <div onClick={() => (setClick("left"))} className={styles.overview}>Описание</div>
             <div className={styles.selected}>Оценка</div>
           </div >
-          <div className={styles.evaluationContent}>
+
+          <div>
+            {/* <div className={styles.expert}>
+              dfshhgfhs
+            </div>
+            <div className={styles.competencies}>
+              <ul> 
+                <li>sfghsgf</li>
+                <li>sfghsgf</li>
+                <li>sfghsgf</li>
+                </ul> 
+
+            </div> */}
+
+
+
 
             {evaluations.map((evaluation, i) =>
-            (<div>
+            (<div className={styles.evaluationBlock}>
               <div className={styles.expert} key={i}>
                 {evaluation.expert.fio}
               </div>
+              <div className={styles.competencies}>
+                <ul>
+                  {evaluation.competencies.map((competency, j) => (
+                  <li className={styles.competency} key={j}>
+                    {competency.name}
+                  </li>
+                ))}
+                </ul>
+                
+              </div>
+          </div>))}
 
-              {evaluation.competencies.map((competency, j) => (
-                <div key={j} className={styles.competency}>
-                  {competency.name}
-                </div>
-              ))}
-
-            </div>))}
-
-          </div>
-          {/* <div className={styles.evaluationContent}>{data ? data[0].raiting : "Loading..."}</div> */}
         </div>
-      }
+          {/* <div className={styles.evaluationContent}>{data ? data[0].raiting : "Loading..."}</div> */}
     </div>
+      }
+    </div >
   )
 }
 export default Profession

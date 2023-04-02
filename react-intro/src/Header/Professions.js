@@ -5,12 +5,13 @@ import { Button, ListItem, ListItemText, List, Paper } from '@mui/material'
 
 
 
-export default function Professions({ changeProf }) {
+export default function Professions( {changeProf} ) {
 
   const [open, setOpen] = useState(false);
 
   const Profs = ["http://localhost:8080/get", "Front-end разработчик", "Back-end разработчик", "HR-менеджер"]
 
+  
   const [profs, setProfs] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -26,7 +27,7 @@ export default function Professions({ changeProf }) {
 
     <div style={{
       height: "100%",
-      width: "130px",
+      width: "140px",
       float: 'right',
       paddingLeft: "10px",
       paddingTop: "60px"
@@ -50,16 +51,6 @@ export default function Professions({ changeProf }) {
               }
             </List>
           </Paper>
-
-          {/* <ul>
-          {
-            profs.map((prof,index)=>(
-                <Slide key={index}>
-                    <li onClick = {()=>(changeProf(prof))} className={styles.prof}>{prof.name}</li>
-                </Slide>
-                ))
-          }
-        </ul> */}
         </div>}
     </div>
   )

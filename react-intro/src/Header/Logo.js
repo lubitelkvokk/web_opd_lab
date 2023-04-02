@@ -5,7 +5,7 @@ export default class Logo extends Component {
   render() { 
 
     return (
-      <div style = {{height:"100%" ,width: "230px", display: "inline-block", float:'left'}}>
+      <div style = {{height:"100%" ,width: "230px", display: "inline-block", float:'left', marginLeft:"10px"}}>
        <a href="http://localhost:3000/">
         <Slide left>
         <img src = {logo} style = {{width: "200px"}} /> 
