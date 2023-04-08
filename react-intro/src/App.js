@@ -7,24 +7,19 @@ import './App.css'
 import { Router, Route, Routes } from "react-router-dom"
 import CompetenciesChoiceS from "./ChoiceOfCompetencies/CompetenciesChoiceS"
 import { ReactGoogleForms } from 'react-google-forms'
+import AllTests from './Content/SensorimotorTests/AllTests'
+
 
 function App() {
   const [prof, changeProf] = React.useState("None")
   const [main, changePage] = React.useState("main")
   const [isExpert, setProof] = React.useState([false, ""])
-  // useEffect(() => {
-  //   console.log(123);
-  //   if (isExpert[0] == true) {
-  //     console.log(321);
-  //     changePage("ExpertEvaluation");
-  //   }
-  // }, [])
 
   return (
     <div className="App">
       <Header changeProf={changeProf} changePage={changePage} setProof={setProof} />
-      { 
-        
+      {
+
         main === "becomeExpert" ?
           <div>
             <iframe style={{ marginTop: "5px", marginLeft: "auto", marginRight: "auto" }}
@@ -33,13 +28,17 @@ function App() {
           :
           main === "ExpertEvaluation" ?
             <div>
-              <CompetenciesChoiceS expertId = {isExpert[1]}/>
-              
-            </div> :
-            <div>
-              <Content prof={prof} />
+              <CompetenciesChoiceS expertId={isExpert[1]} />
 
-            </div>
+            </div> :
+
+            main === "SensorimotorReactions" ?
+              <div>
+                <AllTests />
+              </div> :
+              <div>
+                <Content prof={prof} />
+              </div>
       }
     </div>
   );

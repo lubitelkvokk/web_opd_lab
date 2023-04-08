@@ -6,7 +6,7 @@ import Reveal from "react-reveal/Reveal"
 import Avatar from "./Avatar"
 import BecomeExpert from './BecomeExpert'
 import ExpertEvaluation from './ExpertEvaluation'
-
+import OpenSensorimotor from './OpenSensorimotor'
 
 export default function Header({ changeProf, changePage, setProof }) {
 
@@ -25,9 +25,9 @@ export default function Header({ changeProf, changePage, setProof }) {
         <Professions changeProf={changeProf} />
         <Main changePage={changePage} />
         <BecomeExpert changePage={changePage} />
-        <ExpertEvaluation setProof={setProof} changePage={changePage}/>
+        <ExpertEvaluation setProof={setProof} changePage={changePage} />
+        <OpenSensorimotor changePage={changePage} />
       </Reveal>
-      {/* <Avatar/> */}
 
     </div>
   )

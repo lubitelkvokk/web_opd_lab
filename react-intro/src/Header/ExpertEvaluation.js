@@ -1,19 +1,19 @@
 import React from 'react'
 import { Button, ListItem, ListItemText, List, Paper } from '@mui/material'
-const ExpertEvaluation = ({setProof, changePage}) => {
+const ExpertEvaluation = ({ setProof, changePage }) => {
 
     function foo() {
         var k = prompt("Введите ключ эксперта");
         const fetchData = async () => {
             const response = await fetch("http://localhost:8080/getDataAboutExpert?expertId=" + k);
             const jsonData = await response.json();
-            
+
             setProof([jsonData, k]);
-            if (jsonData){
+            if (jsonData) {
                 changePage("ExpertEvaluation");
             }
-            
-          };
+
+        };
         fetchData();
     }
 

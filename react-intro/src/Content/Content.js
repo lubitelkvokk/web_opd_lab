@@ -13,4 +13,3 @@ const Content = ({ prof }) => {
 export default Content
 
 
-raa
