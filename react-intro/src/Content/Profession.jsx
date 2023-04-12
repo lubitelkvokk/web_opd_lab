@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import styles from "./Styles/Profession.module.css"
 import { Button, ListItem, ListItemText, List, Paper } from '@mui/material'
-const Profession = ({ prof }) => {
+import Professions from '../Header/Professions';
+const Profession = ({ prof}) => {
   // const [data, setData] = useState(null);
   // useEffect(() => {
   //   const fetchData = async () => {
@@ -26,6 +27,7 @@ const Profession = ({ prof }) => {
 
   return (
     <div className={styles.content}>
+
       <div className={styles.professionName}>{prof.name ? prof.name : "Выберите профессию"}</div>
 
       {swch == "left" ?

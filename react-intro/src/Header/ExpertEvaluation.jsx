@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, ListItem, ListItemText, List, Paper } from '@mui/material'
+import { BrowserRouter, Link, Route } from 'react-router-dom';
 const ExpertEvaluation = ({ setProof, changePage }) => {
 
     function foo() {
@@ -18,15 +19,21 @@ const ExpertEvaluation = ({ setProof, changePage }) => {
     }
 
     return (
-        <div style={{
-            height: "100%",
-            width: "180px",
-            float: 'right',
-            // paddingLeft: "650px",
-            paddingTop: "60px",
-        }}>
-            <Button variant="contained" color="primary" onClick={() => (foo())} > Сделать оценку</Button>
-        </div>
+
+            <div style={{
+                height: "100%",
+                width: "180px",
+                float: 'right',
+                // paddingLeft: "650px",
+                paddingTop: "60px",
+            }}>
+                <Button variant="contained" color="primary" onClick={() => (foo())}>
+                    <Link to="expertEvaluation">Сделать оценку
+                    </Link> 
+                    </Button>
+            </div>
+
+
     )
 }
 

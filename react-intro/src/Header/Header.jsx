@@ -7,8 +7,11 @@ import Avatar from "./Avatar"
 import BecomeExpert from './BecomeExpert'
 import ExpertEvaluation from './ExpertEvaluation'
 import OpenSensorimotor from './OpenSensorimotor'
+import { Outlet } from "react-router-dom"
 
-export default function Header({ changeProf, changePage, setProof }) {
+
+
+export default function Header({changePage, setProof }) {
 
   return (
     <div style={{
@@ -18,17 +21,16 @@ export default function Header({ changeProf, changePage, setProof }) {
       height: "105px",
       paddingTop: "5px",
       backgroundColor: "white",
-      boxShadow: "0 4px 2px -2px gray"
+      boxShadow: "0 4px 2px -2px gray",
     }}>
       <Logo />
       <Reveal>
-        <Professions changeProf={changeProf} />
         <Main changePage={changePage} />
         <BecomeExpert changePage={changePage} />
         <ExpertEvaluation setProof={setProof} changePage={changePage} />
         <OpenSensorimotor changePage={changePage} />
       </Reveal>
-
+      <Outlet />
     </div>
   )
 }

@@ -25,13 +25,7 @@ export default function Professions( {changeProf} ) {
 
   return (
 
-    <div style={{
-      height: "100%",
-      width: "140px",
-      float: 'right',
-      paddingLeft: "10px",
-      paddingTop: "60px"
-    }}>
+    <div style={{textAlign:"center"}}>
       <Button variant="contained" color="primary" onClick={() => (setOpen(!open))}>Профессии</Button>
       {open &&
         <div style={{ marginTop: "5px" }}>
