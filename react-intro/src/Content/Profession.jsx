@@ -2,26 +2,32 @@ import React, { useEffect, useState } from 'react'
 import styles from "./Styles/Profession.module.css"
 import { Button, ListItem, ListItemText, List, Paper } from '@mui/material'
 import Professions from '../Header/Professions';
-const Profession = ({ prof}) => {
-  // const [data, setData] = useState(null);
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const response = await fetch("http://localhost:8080/getEvaluationByProfessionId?id="+(prof.id ? prof.id : 1));
-  //     const jsonData = await response.json();
-  //     setData(jsonData);
-  //   };
-  //   fetchData();
-  // }, [prof.id]);
+const Profession = ({ prof }) => {
+
+
+
+
 
   const [evaluations, setEvaluations] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:8080/getEvaluationsByProfessionId?id=" + (prof.id ? prof.id : 1));
+      const response = await fetch("http://localhost:8080/getEvaluationsByProfessionsId?id=" + (prof.id ? prof.id : 1));
       const jsonData = await response.json();
+      console.log(jsonData);
       setEvaluations(jsonData);
     };
     fetchData();
+
   }, [prof]);
+
+
+  //TODO 
+  // const getCompetencyById = async (competency_id) => {
+  //   const response = await fetch("http://localhost:8080/getCompetencyById?id=" + (competency_id ? competency_id : 10));
+  //   const jsonData = await response.json();
+  //   console.log(jsonData.name);
+  //   return jsonData.name;
+  // }
 
   const [swch, setClick] = useState("left");
 
@@ -45,27 +51,13 @@ const Profession = ({ prof}) => {
           </div >
 
           <div>
-            {/* <div className={styles.expert}>
-              dfshhgfhs
-            </div>
-            <div className={styles.competencies}>
-              <ul> 
-                <li>sfghsgf</li>
-                <li>sfghsgf</li>
-                <li>sfghsgf</li>
-                </ul> 
-
-            </div> */}
-
-
-
-
             {evaluations.map((evaluation, i) =>
             (<div className={styles.evaluationBlock}>
               <div className={styles.expert} key={i}>
-                {evaluation.expert.fio}
+                {evaluation.name +"                                    " +evaluation.raiting}
               </div>
-              <div className={styles.competencies}>
+ 
+              {/* <div className={styles.competencies}>
                 <ul>
                   {evaluation.competencies.map((competency, j) => (
                   <li className={styles.competency} key={j}>
@@ -74,12 +66,10 @@ const Profession = ({ prof}) => {
                 ))}
                 </ul>
                 
-              </div>
-          </div>))}
-
+              </div> */}
+            </div>))}
+          </div>
         </div>
-          {/* <div className={styles.evaluationContent}>{data ? data[0].raiting : "Loading..."}</div> */}
-    </div>
       }
     </div >
   )

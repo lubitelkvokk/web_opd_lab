@@ -66,7 +66,7 @@ const CompetenciesChoiceS = (expertId) => {
                         'Accept': '*/*',
                         'Content-Type': 'application/json'
                     },
-
+                    
                     body: JSON.stringify(data)
                 })
                     .then((response) => {
@@ -127,7 +127,7 @@ const CompetenciesChoiceS = (expertId) => {
                     <div style={{ marginLeft: "480px", display: "flex", marginTop: "10px" }}>
                         <div key={index} style={{ width: "500px", display: "flex", flexDirection: "column" }}>
                             <div style={{ margin: "auto" }}>
-                                <Button style={{ width: "500px", height: "30px" }} variant="contained" color="primary" onClick={() => (condition[index] = !condition[index], setOpen(!open))}>{element.name}</Button>
+                                <Button style={{ width: "500px", height: "50px" }} variant="contained" color="primary" onClick={() => (condition[index] = !condition[index], setOpen(!open))}>{element.name}</Button>
                                 <div style={{ display: "flex" }}>
                                     {condition[index] && <Paper elevation={3} style={{ margin: "auto", maxHeight: 200, overflow: 'auto', width: "500px" }}>
                                         <List style={{ maxHeight: '100%', overflow: 'auto' }} component="nav"
