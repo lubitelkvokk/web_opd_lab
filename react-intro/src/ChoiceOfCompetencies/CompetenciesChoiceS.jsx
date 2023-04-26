@@ -87,7 +87,7 @@ const CompetenciesChoiceS = (expertId) => {
     }
 
     const fetchData = async () => {
-        const prof_response = await fetch("http://localhost:8080/getProfs");
+        const prof_response = await fetch("http://localhost:8080/getAllProfessions");
         const response = await fetch("http://localhost:8080/getAllCompetencies");
         const temp_prof = await prof_response.json();
         const jsonData = await response.json();

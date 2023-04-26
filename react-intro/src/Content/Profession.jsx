@@ -11,7 +11,7 @@ const Profession = ({ prof }) => {
   const [evaluations, setEvaluations] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:8080/getEvaluationsByProfessionsId?id=" + (prof.id ? prof.id : 1));
+      const response = await fetch("http://localhost:8080/getStatisticsByProfessionId?id=" + (prof.id ? prof.id : 1));
       const jsonData = await response.json();
       console.log(jsonData);
       setEvaluations(jsonData);
@@ -20,14 +20,6 @@ const Profession = ({ prof }) => {
 
   }, [prof]);
 
-
-  //TODO 
-  // const getCompetencyById = async (competency_id) => {
-  //   const response = await fetch("http://localhost:8080/getCompetencyById?id=" + (competency_id ? competency_id : 10));
-  //   const jsonData = await response.json();
-  //   console.log(jsonData.name);
-  //   return jsonData.name;
-  // }
 
   const [swch, setClick] = useState("left");
 
@@ -51,22 +43,12 @@ const Profession = ({ prof }) => {
           </div >
 
           <div>
-            {evaluations.map((evaluation, i) =>
+            {Object.keys(evaluations).map((evaluationKey, i) =>
             (<div className={styles.evaluationBlock}>
               <div className={styles.expert} key={i}>
-                {evaluation.name +"                                    " +evaluation.raiting}
+                {evaluationKey + '   :   ' + evaluations[evaluationKey]}
               </div>
- 
-              {/* <div className={styles.competencies}>
-                <ul>
-                  {evaluation.competencies.map((competency, j) => (
-                  <li className={styles.competency} key={j}>
-                    {competency.name}
-                  </li>
-                ))}
-                </ul>
-                
-              </div> */}
+
             </div>))}
           </div>
         </div>

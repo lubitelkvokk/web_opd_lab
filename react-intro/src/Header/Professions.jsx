@@ -15,7 +15,7 @@ export default function Professions( {changeProf} ) {
   const [profs, setProfs] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:8080/getProfs");
+      const response = await fetch("http://localhost:8080/getAllProfessions");
       const jsonData = await response.json();
       setProfs(jsonData);
     };
