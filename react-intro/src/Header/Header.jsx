@@ -8,8 +8,8 @@ import BecomeExpert from './BecomeExpert'
 import ExpertEvaluation from './ExpertEvaluation'
 import OpenSensorimotor from './OpenSensorimotor'
 import { Outlet } from "react-router-dom"
-
-
+import CustomLink from "../components/CustomLink";
+import ToLoginPage from './ToLoginPage'
 
 export default function Header({changePage, setProof }) {
 
@@ -29,6 +29,7 @@ export default function Header({changePage, setProof }) {
         <BecomeExpert changePage={changePage} />
         <ExpertEvaluation setProof={setProof} changePage={changePage} />
         <OpenSensorimotor changePage={changePage} />
+        <ToLoginPage/>
       </Reveal>
       <Outlet />
     </div>

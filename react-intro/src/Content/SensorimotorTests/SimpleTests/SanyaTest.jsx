@@ -1,7 +1,6 @@
 import React, { useState/*, useEffect*/ } from 'react';
-import "./styles/Buttons.css";
-import "./styles/text.css";
-import { Button } from 'react-bootstrap';
+import "./styles/Text.module.css";
+import  Button  from './Button';
 function TestPage(searchElement, fromIndex) {
     const [startTime, setStartTime] = useState(null);
     const [endTime, setEndTime] = useState(null);

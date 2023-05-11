@@ -7,8 +7,8 @@ import SanyaTest from "./SimpleTests/SanyaTest"
 const AllTests = () => {
     return (
         <div className={styles.content}>
-            {/* <TestPage/> */}
-            < SanyaTest />
+            <TestPage/>
+            {/* < SanyaTest /> */}
         </div>
     )
 }
